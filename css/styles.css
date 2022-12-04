@@ -1,0 +1,539 @@
+/* rules applying to everything */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+/* some global variables */
+:root {
+    --primary: #CD0F0F;
+    --dark: #111010;
+    --light: #F0F0F0;
+    --shadow: #959595;
+    --home: #FF6262;
+    --largetxt: 5rem;
+    --medfont: 3rem;
+    --pfont: 1rem;
+}
+html{
+    overflow-x: hidden;
+}
+/* setting background and font color of the page */
+body{
+    background: var(--light);
+    color: var(--light);
+}
+/* setting up the header section where the nav bar is located - spacing elements within the header */
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark);
+    padding: 15px 6%;
+}
+/* span is used to highlight some parts of text red as seen on the website */
+span{
+    color: var(--primary);
+}
+/* offset of sections from the webpage */
+section{
+    padding: 10% 15%;
+}
+/* changing appearance of the portfolio logo with color and size */
+.logo{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--light);
+}
+/* making the navigation bar a flex element */
+.nav{
+    display: flex;
+}
+/* making all li withing the ul relative so the animated line appearing with hover works */
+.nav li{
+    position: relative;
+}
+/* changing apperance of text on the nav bar */
+.nav a{
+    color: var(--light);
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 35px 35px;
+}
+/* creating a line of width 0 initially after every 'a' element to set up the line animation*/
+.nav a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    left: 0;
+    bottom: -3.5px;
+    transition: ease .55s;
+}
+/* when mouse is hovering over 'a' element the line animation begins with a width of 100% of the whole word */
+.nav a:hover::after{
+    width: 100%;
+}
+/* hiding the menu icon which is to be used later when page is resized smaller */
+#nav-icon {
+    font-size: 24px;
+    color: var(--light);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+/*  */
+.home{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(124, 6, 6, 0.8)), url(../images/redBG.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+/*  */
+.intro-text{
+    padding-top: 9%;
+}
+.intro-text h1{
+    font-size: var(--largetxt);
+    line-height: 1.2;
+    font-weight: 650;
+    letter-spacing: 1px;
+    cursor: default;
+    margin-left: -7.5px;
+}
+
+.intro-text h2{
+    font-size: var(--medfont);
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0 0 4%;
+    cursor: default;
+}
+.intro-text h4{
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 5%;
+    cursor: default;
+    margin-left: 7px;
+}
+/*  */
+.btn{
+    display: inline-block;
+    font-size: var(--pfont);
+    font-weight: 600;
+    padding: 1% 3%;
+    margin: 15px 0 0 6px;
+    background: var(--primary);
+    color: var(--light);
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: ease .30s;
+}
+.btn:hover{
+    transform: translateY(-7px);
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+/*  */
+.sections-below{
+    display: flex;
+    margin-top: 8%;
+    cursor: default;
+}
+.sections-below li{
+    margin-right: 7%;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+/*  */
+#down-arrow1{
+    padding-left: 30%;
+    padding-top: 15%;
+}
+#down-arrow2{
+    padding-left: 40%;
+    padding-top: 8%;
+}
+#down-arrow3{
+    padding-left: 30%;
+    padding-top: 15%;
+}
+/*  */
+.about-me{
+    background: var(--dark);
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    grid-gap: 2rem;
+    cursor: default;
+}
+.about-me1 h2{
+    font-size: var(--medfont);
+    font-weight: 400;
+}
+#about{
+    position: relative;
+}
+#about::after{  
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    left: 0;
+    bottom: 0;
+    transition: ease .55s;
+}
+.about-me1:hover > #about::after{
+    width: 75%;
+}
+.about-me2 p{
+    font-size: var(--pfont);
+    font-weight: 200;
+    padding-top: 3%;
+}
+/*  */
+.skills{
+    background: #3d3d3d;
+}
+.skills-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-gap: 6rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: -6rem;
+}
+.card{
+    position: relative;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--primary);
+    min-height: 400px;
+    transition: all .35s;
+}
+.card:hover {
+    transform: scale(115%);
+}
+.card img{
+    max-width: 200px;
+    max-height: 200px;
+}
+/*  */
+#swift-logo{
+    padding-top: 1.5rem;
+}
+#project-logo{
+    padding-top: 1.5rem;
+}
+#teamwork-logo{
+    padding-top: 1.5rem;
+}
+/*  */
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    transition: all .35s;
+}
+.layer:hover{
+    background: linear-gradient(rgba(22, 22, 22, 0.06) 0%, #851f1f 100%);
+}
+.layer h3{
+    position: absolute;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .35s;
+}
+.layer:hover h3{
+    bottom: 40%;
+    opacity: 1;
+}
+.layer p {
+    position: absolute;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 250;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .35s;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.layer:hover p {
+    bottom: 20%;
+    opacity: 1;
+}
+.layer i{
+    position: absolute;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 250;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .35s;
+}
+.layer:hover i{
+    bottom: 5%;
+    opacity: 1;
+}
+#more{
+    color: var(--light);
+    display: none;
+}
+/*  */
+.projects{
+    background: var(--dark);
+}
+.panel-container{
+    display: flex;
+    width: 70vw;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    transition: flex 0.5s ease-out;
+}
+
+#javagame {
+    background-position: left center;
+}
+#portfolio{
+    background-position: left center;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel-desc{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 350;
+    margin-top: 4%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 3.5s;
+}
+
+.panel-desc.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* job section styling */
+.jobs{
+    background: #3d3d3d;
+}
+
+.jobs-container{
+    display: flex;
+    flex-direction: column; 
+}
+
+.job{
+    margin-top: 5%;
+}
+
+.job h3{
+    font-size: 2rem;
+}
+
+.job h4{
+    margin-top: 2%;
+    font-size: 1.6rem;
+}
+
+.job p{
+    margin-top: 2%;
+    font-size: 1.2rem;
+}
+
+.job li{
+    margin-top: 15px;
+}
+/* contact form styling */
+.contact{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(130, 8, 8, 0.8)), url(../images/contactBG.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact-btn{
+    cursor: pointer;
+    width: 100%;
+}
+form{
+    width: 90%;
+    max-width: 600px;
+}
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: var(--pfont);
+}
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: ease-out 0.2s;
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -30px;
+    font-size: 0.9rem;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row .input-group{
+    flex-basis: 48%;
+}
+
+/* footer */
+.copyright{
+    background: var(--dark);
+    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright p{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.icons a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+    background: var(--shadow);
+    border-radius: 50%;
+    transition: all .40s;
+}
+
+.icons a:hover{
+    transform: translateY(-7px);
+}
+
+/* media queries for responsivness */
+@media (max-width: 805px){
+    #nav-icon{
+        display: block;
+    }
+    .nav{
+        position: absolute;
+        top: -600px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--dark);
+        text-align: left;
+        transition: all .35s ease;
+    }
+    .nav a{
+        display: block;
+        padding: 1rem;
+        margin: 1rem;
+        border-left: 2px solid var(--primary);
+    }
+    .nav.active{
+        top: 100%;
+    }
+    .about-me{
+        grid-template-columns: 1fr;
+    }
+    .intro-text{
+        text-align: center;
+    }
+    .sections-below{
+        margin-left: 28%;
+        margin-top: 10%;
+    }
+}
+
+@media(max-width: 480px){
+    .panel-container{
+        width: 90vw;
+        margin-left: -15%;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+    .sections-below{
+        margin-left: 17%;
+        margin-top: 20%;
+    }
+    .skills-content{    
+        margin-left: 1%;
+    }
+}
