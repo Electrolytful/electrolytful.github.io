@@ -54,25 +54,41 @@ panels.forEach((panel) => {
 
         switch(panelId){
 
-            case 'swiftrift':
-                panelDesc.innerHTML = "This is Swift Rift!";
-                panelDesc.classList.add('show');
-                break;
-            case 'javagame':
-                panelDesc.innerHTML = "This is Java Game!";
+            case 'historyguessr':
+                panelDesc.innerHTML = "Click to navigate to History Guessr!";
                 panelDesc.classList.add('show');
                 break;
             case 'portfolio':
-                panelDesc.innerHTML = "This is Portfolio!";
+                panelDesc.innerHTML = "Click to navigate to Portfolio!";
+                panelDesc.classList.add('show');
+                break;
+            case 'swiftrift':
+                panelDesc.innerHTML = "Click to navigate to Swift Rift!";
                 panelDesc.classList.add('show');
                 break;
             case 'future1':
-                panelDesc.innerHTML = "This is Future Project!";
+                panelDesc.innerHTML = "Future Project!";
                 panelDesc.classList.add('show');
                 break;
             case 'future2':
-                panelDesc.innerHTML = "This is Future Project!";
+                panelDesc.innerHTML = "Future Project!";
                 panelDesc.classList.add('show');
+                break;
+        }
+    })
+    panel.addEventListener('click', () => {
+        const panelId = panel.id;
+
+        switch(panelId){
+
+            case 'historyguessr':
+                window.open('https://github.com/Electrolytful/History-Guessr', '_blank');
+                break;
+            case 'portfolio':
+                window.open('https://github.com/Electrolytful/electrolytful.github.io', '_blank');
+                break;
+            case 'swiftrift':
+                window.open('https://github.com/Electrolytful/Swift_Rift', '_blank');
                 break;
         }
     })

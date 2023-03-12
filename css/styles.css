@@ -27,6 +27,12 @@ html{
 body{
     background: var(--light);
     color: var(--light);
+    user-select: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 /* setting up the header section where the nav bar is located - spacing elements within the header */
 header{
