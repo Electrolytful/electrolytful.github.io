@@ -9,6 +9,7 @@
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
 }
+
 /* some global variables */
 :root {
     --primary: #CD0F0F;
@@ -20,9 +21,11 @@
     --medfont: 3rem;
     --pfont: 1rem;
 }
+
 html{
     overflow-x: hidden;
 }
+
 /* setting background and font color of the page */
 body{
     background: var(--light);
@@ -31,9 +34,11 @@ body{
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
+
 /* setting up the header section where the nav bar is located - spacing elements within the header */
 header{
     position: fixed;
@@ -47,28 +52,34 @@ header{
     background: var(--dark);
     padding: 15px 6%;
 }
+
 /* span is used to highlight some parts of text red as seen on the website */
 span{
     color: var(--primary);
 }
+
 /* offset of sections from the webpage */
 section{
     padding: 10% 15%;
 }
+
 /* changing appearance of the portfolio logo with color and size */
 .logo{
     font-size: 1.7rem;
     font-weight: 600;
     color: var(--light);
 }
+
 /* making the navigation bar a flex element */
 .nav{
     display: flex;
 }
+
 /* making all li withing the ul relative so the animated line appearing with hover works */
 .nav li{
     position: relative;
 }
+
 /* changing apperance of text on the nav bar */
 .nav a{
     color: var(--light);
@@ -76,6 +87,7 @@ section{
     font-size: 1.1rem;
     padding: 35px 35px;
 }
+
 /* creating a line of width 0 initially after every 'a' element to set up the line animation*/
 .nav a::after{
     content: '';
@@ -87,10 +99,12 @@ section{
     bottom: -3.5px;
     transition: ease .55s;
 }
+
 /* when mouse is hovering over 'a' element the line animation begins with a width of 100% of the whole word */
 .nav a:hover::after{
     width: 100%;
 }
+
 /* hiding the menu icon which is to be used later when page is resized smaller */
 #nav-icon {
     font-size: 24px;
@@ -99,6 +113,7 @@ section{
     cursor: pointer;
     display: none;
 }
+
 /*  */
 .home{
     height: 100vh;
@@ -111,10 +126,12 @@ section{
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
 }
+
 /*  */
 .intro-text{
     padding-top: 9%;
 }
+
 .intro-text h1{
     font-size: var(--largetxt);
     line-height: 1.2;
@@ -132,6 +149,7 @@ section{
     margin: 0 0 4%;
     cursor: default;
 }
+
 .intro-text h4{
     font-size: 1.5rem;
     line-height: 1.2;
@@ -140,6 +158,7 @@ section{
     cursor: default;
     margin-left: 7px;
 }
+
 /*  */
 .btn{
     display: inline-block;
@@ -153,12 +172,14 @@ section{
     border: 2px solid transparent;
     transition: ease .30s;
 }
+
 .btn:hover{
     transform: translateY(-7px);
     background: transparent;
     color: var(--primary);
     border: 2px solid var(--primary);
 }
+
 /*  */
 .sections-below{
     display: flex;
@@ -170,6 +191,7 @@ section{
     font-size: 1.2rem;
     font-weight: 400;
 }
+
 /*  */
 #down-arrow1{
     padding-left: 30%;
@@ -183,6 +205,7 @@ section{
     padding-left: 30%;
     padding-top: 15%;
 }
+
 /*  */
 .about-me{
     background: var(--dark);
@@ -192,14 +215,17 @@ section{
     grid-gap: 2rem;
     cursor: default;
 }
+
 .about-me1 h2{
     font-size: var(--medfont);
     font-weight: 400;
 }
+
 #about{
     position: relative;
 }
-#about::after{  
+
+#about::after{
     content: '';
     position: absolute;
     width: 0;
@@ -209,18 +235,28 @@ section{
     bottom: 0;
     transition: ease .55s;
 }
+
 .about-me1:hover > #about::after{
     width: 75%;
 }
+
 .about-me2 p{
     font-size: var(--pfont);
     font-weight: 200;
     padding-top: 3%;
 }
+
 /*  */
 .skills{
     background: #3d3d3d;
 }
+
+#skills-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: var(--medfont);
+}
+
 .skills-content{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, auto));
@@ -230,8 +266,8 @@ section{
     text-align: center;
     cursor: pointer;
     margin-top: 1rem;
-    margin-left: -6rem;
 }
+
 .card{
     position: relative;
     border-radius: 15px;
@@ -240,23 +276,36 @@ section{
     min-height: 400px;
     transition: all .35s;
 }
+
 .card:hover {
     transform: scale(115%);
 }
+
 .card img{
     max-width: 200px;
     max-height: 200px;
 }
+
 /*  */
-#swift-logo{
+#react-logo {
     padding-top: 1.5rem;
 }
-#project-logo{
+#express-logo {
+    padding-top: 3rem;
+}
+#node-logo {
     padding-top: 1.5rem;
 }
-#teamwork-logo{
+#postgresql-logo {
     padding-top: 1.5rem;
 }
+#mongodb-logo {
+    padding-top: 1.5rem;
+}
+#github-logo {
+    padding-top: 1.5rem;
+}
+
 /*  */
 .layer{
     background: transparent;
@@ -268,9 +317,11 @@ section{
     left: 0;
     transition: all .35s;
 }
+
 .layer:hover{
     background: linear-gradient(rgba(22, 22, 22, 0.06) 0%, #851f1f 100%);
 }
+
 .layer h3{
     position: absolute;
     width: 100%;
@@ -282,10 +333,12 @@ section{
     opacity: 0;
     transition: all .35s;
 }
+
 .layer:hover h3{
-    bottom: 40%;
+    bottom: 35%;
     opacity: 1;
 }
+
 .layer p {
     position: absolute;
     width: 100%;
@@ -299,10 +352,12 @@ section{
     padding-left: 2%;
     padding-right: 2%;
 }
+
 .layer:hover p {
     bottom: 20%;
     opacity: 1;
 }
+
 .layer i{
     position: absolute;
     width: 100%;
@@ -314,18 +369,28 @@ section{
     opacity: 0;
     transition: all .35s;
 }
+
 .layer:hover i{
     bottom: 5%;
     opacity: 1;
 }
+
 #more{
     color: var(--light);
     display: none;
 }
+
 /*  */
 .projects{
     background: var(--dark);
 }
+
+#projects-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: var(--medfont);
+}
+
 .panel-container{
     display: flex;
     width: 70vw;
@@ -343,7 +408,7 @@ section{
     transition: flex 0.5s ease-out;
 }
 
-#javagame {
+#notesai {
     background-position: left center;
 }
 #portfolio{
@@ -374,9 +439,16 @@ section{
     background: #3d3d3d;
 }
 
+#jobs-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: var(--medfont);
+}
+
 .jobs-container{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    gap: 50px;
 }
 
 .job{
@@ -400,6 +472,7 @@ section{
 .job li{
     margin-top: 15px;
 }
+
 /* contact form styling */
 .contact{
     width: 100%;
@@ -411,18 +484,22 @@ section{
     align-items: center;
     justify-content: center;
 }
+
 #contact-btn{
     cursor: pointer;
     width: 100%;
 }
+
 form{
     width: 90%;
     max-width: 600px;
 }
+
 .input-group{
     margin-bottom: 30px;
     position: relative;
 }
+
 input, textarea{
     width: 100%;
     padding: 10px;
@@ -432,6 +509,7 @@ input, textarea{
     background: transparent;
     font-size: var(--pfont);
 }
+
 label{
     height: 100%;
     position: absolute;
@@ -442,6 +520,7 @@ label{
     cursor: text;
     transition: ease-out 0.2s;
 }
+
 input:focus~label,
 input:valid~label,
 textarea:focus~label,
@@ -449,11 +528,13 @@ textarea:valid~label{
     top: -30px;
     font-size: 0.9rem;
 }
+
 .row{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .row .input-group{
     flex-basis: 48%;
 }
@@ -539,7 +620,7 @@ textarea:valid~label{
         margin-left: 17%;
         margin-top: 20%;
     }
-    .skills-content{    
+    .skills-content{
         margin-left: 1%;
     }
 }

@@ -1,16 +1,16 @@
-// 
+//
 const card = document.getElementsByClassName("card");
 const panels = document.querySelectorAll('.panel');
 const panelDesc = document.querySelector('.panel-desc');
 let i;
 
-// 
-for(i = 0; i < card.length; i++){                        
+//
+for(i = 0; i < card.length; i++){
     card[i].addEventListener("click", function(){
         // console.log("clicked");
         // console.log(this.children[1].children[2].className);
-        
-        // 
+
+        //
         if(this.style.minHeight === "400px"){
             this.style.minHeight = "550px";
             this.children[1].children[1].children[0].style.display = "inline";
@@ -46,7 +46,7 @@ for(i = 0; i < card.length; i++){
     })
 }
 
-// 
+//
 panels.forEach((panel) => {
     panel.addEventListener('mouseenter', () => {
         panel.classList.add('active') ;
@@ -66,16 +66,17 @@ panels.forEach((panel) => {
                 panelDesc.innerHTML = "Click to navigate to Swift Rift!";
                 panelDesc.classList.add('show');
                 break;
-            case 'future1':
-                panelDesc.innerHTML = "Future Project!";
+            case 'notesai':
+                panelDesc.innerHTML = "Click to navigate to NotesAI!";
                 panelDesc.classList.add('show');
                 break;
-            case 'future2':
-                panelDesc.innerHTML = "Future Project!";
+            case 'florin':
+                panelDesc.innerHTML = "Click to navigate to Florin Council!";
                 panelDesc.classList.add('show');
                 break;
         }
     })
+
     panel.addEventListener('click', () => {
         const panelId = panel.id;
 
@@ -90,11 +91,18 @@ panels.forEach((panel) => {
             case 'swiftrift':
                 window.open('https://github.com/Electrolytful/Swift_Rift', '_blank');
                 break;
+            case 'notesai':
+                window.open('https://github.com/Electrolytful/NotesAI_backend', '_blank');
+                break;
+            case 'florin':
+                window.open('https://github.com/Electrolytful/FlorinCouncil', '_blank');
+                break;
         }
     })
+
     panel.addEventListener('mouseleave', () => {
         panel.classList.remove('active');
         panelDesc.classList.remove('show');
-        panelDesc.innerHTML = "This is a placeholder";
+        panelDesc.innerHTML = "";
     })
 })
