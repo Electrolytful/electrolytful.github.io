@@ -1,0 +1,23 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio website showcasing my skills and projects",
+  "main": "main.mjs",
+  "scripts": {
+    "compile-sass": "node-sass -w ./sass/main.scss ./css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Electrolytful/electrolytful.github.io.git"
+  },
+  "keywords": [],
+  "author": "Erhan Ulusal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Electrolytful/electrolytful.github.io/issues"
+  },
+  "homepage": "https://github.com/Electrolytful/electrolytful.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

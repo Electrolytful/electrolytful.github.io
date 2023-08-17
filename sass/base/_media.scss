@@ -1,0 +1,64 @@
+@media (max-width: 805px) {
+    #nav-icon {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: -600px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: $dark;
+        text-align: left;
+        transition: all .35s ease;
+
+        a {
+            display: block;
+            padding: 1rem;
+            margin: 1rem;
+            border-left: 2px solid $primary;
+        }
+
+        &.active {
+            top: 100%;
+        }
+    }
+
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    .sections-below {
+        margin-left: 28%;
+        margin-top: 10%;
+    }
+}
+
+@media(max-width: 480px) {
+    .panel {
+        &-container {
+            width: 90vw;
+            margin-left: -15%;
+        }
+
+        &:nth-of-type(4),
+        .panel:nth-of-type(5) {
+            display: none;
+        }
+    }
+
+    .sections-below {
+        margin-left: 17%;
+        margin-top: 20%;
+    }
+
+    .skills-content {
+        margin-left: 1%;
+    }
+}

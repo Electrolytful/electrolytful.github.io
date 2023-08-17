@@ -1,0 +1,15 @@
+.jobs {
+    background: #3d3d3d;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+#jobs-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: $medfont;
+}

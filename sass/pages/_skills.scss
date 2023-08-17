@@ -1,0 +1,20 @@
+.skills {
+    background: #3d3d3d;
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+        grid-gap: 6rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+}
+
+#skills-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: $medfont;
+}

@@ -1,0 +1,114 @@
+.card {
+    position: relative;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: $primary;
+    min-height: 400px;
+    transition: all .35s;
+
+    &:hover {
+        transform: scale(115%);
+    }
+
+    img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+#react-logo {
+    padding-top: 1.5rem;
+}
+
+#express-logo {
+    padding-top: 3rem;
+}
+
+#node-logo {
+    padding-top: 1.5rem;
+}
+
+#postgresql-logo {
+    padding-top: 1.5rem;
+}
+
+#mongodb-logo {
+    padding-top: 1.5rem;
+}
+
+#github-logo {
+    padding-top: 1.5rem;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    transition: all .35s;
+
+    &:hover {
+        background: linear-gradient(rgba(22, 22, 22, 0.06) 0%, #851f1f 100%);
+
+        h3 {
+            bottom: 35%;
+            opacity: 1;
+        }
+
+        p {
+            bottom: 20%;
+            opacity: 1;
+        }
+
+        i {
+            bottom: 5%;
+            opacity: 1;
+        }
+    }
+
+    h3 {
+        position: absolute;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 400;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all .35s;
+    }
+
+    p {
+        position: absolute;
+        width: 100%;
+        font-size: 0.9rem;
+        font-weight: 250;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all .35s;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    i {
+        position: absolute;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 250;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all .35s;
+    }
+}
+
+#more {
+    color: $light;
+    display: none;
+}

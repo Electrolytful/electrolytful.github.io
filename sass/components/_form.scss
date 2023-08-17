@@ -1,0 +1,53 @@
+form {
+    width: 90%;
+    max-width: 600px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: $pfont;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -30px;
+    font-size: 0.9rem;
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: ease-out 0.2s;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .input-group {
+        flex-basis: 48%;
+    }
+}
+
+#contact-btn {
+    cursor: pointer;
+    width: 100%;
+}
