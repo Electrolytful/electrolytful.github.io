@@ -12,6 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
+    <script defer type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("ABL0pD8PMdSinaJ0q");
+        })();
+    </script>
+
     <title>My Portfolio</title>
 </head>
 
@@ -143,7 +151,6 @@
             </div>
 
         </div>
-
     </section>
 
     <!-- projects section start -->
@@ -151,30 +158,18 @@
         <h2 id="projects-title"><span>P</span>rojects</h2>
 
         <div class="panel-container">
-            <div class="panel" style="background-image: url('images/notesai.PNG')" id="notesai">
+            <div class="panel" style="background-image: url('images/notesai.PNG')" id="notesai"></div>
 
-            </div>
+            <div class="panel" style="background-image: url('images/florincouncil.PNG')" id="florin"></div>
 
-            <div class="panel" style="background-image: url('images/florincouncil.PNG')" id="florin">
+            <div class="panel" style="background-image: url('images/historyguessr.PNG')" id="historyguessr"></div>
 
-            </div>
+            <div class="panel" style="background-image: url('images/portfolio.PNG')" id="portfolio"></div>
 
-            <div class="panel" style="background-image: url('images/historyguessr.PNG')" id="historyguessr">
-
-            </div>
-
-            <div class="panel" style="background-image: url('images/portfolio.PNG')" id="portfolio">
-
-            </div>
-
-            <div class="panel" style="background-image: url('images/swiftrift.png')" id="swiftrift">
-
-            </div>
-
+            <div class="panel" style="background-image: url('images/swiftrift.png')" id="swiftrift"></div>
         </div>
 
         <p class="panel-desc"></p>
-
     </section>
 
     <!-- jobs section start -->
@@ -199,52 +194,46 @@
             </div>
 
         </div>
-
     </section>
 
     <!-- contact section start -->
     <section class="contact" id="contact">
-
         <form>
-
             <div class="row">
                 <div class="input-group">
-                    <input type="text" id ="name" required>
-                    <label for="name"><i class='bx bxs-user'></i> Name</label>
+                    <input type="text" id="name" required>
+                    <label for="name"><i class='bx bxs-user'></i> Name*</label>
                 </div>
 
                 <div class="input-group">
-                    <input type="text" id ="number" required>
-                    <label for="number"><i class='bx bxs-phone'></i> Phone No.</label>
+                    <input type="text" id="number" required>
+                    <label for="number"><i class='bx bxs-phone'></i> Phone No.*</label>
                 </div>
             </div>
 
             <div class="input-group">
-                <input type="text" id ="email" required>
-                <label for="email"><i class='bx bxs-envelope'></i> Email</label>
+                <input type="text" id="email" required>
+                <label for="email"><i class='bx bxs-envelope'></i> Email*</label>
             </div>
 
             <div class="input-group">
                 <textarea id="message" rows="10" required></textarea>
-                <label for="message"><i class='bx bxs-chat'></i> Leave a message</label>
+                <label for="message"><i class='bx bxs-chat'></i> Leave a message*</label>
             </div>
-            <button id = "contact-btn" class="btn" type="submit">SUBMIT <i class='bx bx-mail-send'></i></button>
-        </form>
 
+            <button id="contact-btn" class="btn" type="submit" onclick="submitMail()">SUBMIT <i class='bx bx-mail-send'></i></button>
+        </form>
     </section>
 
     <!-- footer -->
-
     <div class="copyright">
         <p>Designed and developed by <span>E</span>rhan <span>U</span>lusal.</p>
+
         <div class="icons">
             <a href="https://twitter.com/electrolytful" target="_blank"><i class='bx bxl-twitter' ></i></a>
             <a href="https://github.com/Electrolytful" target="_blank"><i class='bx bxl-github' ></i></a>
             <a href="https://www.linkedin.com/in/erhan-002/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
         </div>
     </div>
-
-    <!-- js script link -->
-    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
