@@ -199,21 +199,21 @@
 
     <!-- contact section start -->
     <section class="contact" id="contact">
-        <form>
+        <form id="contact-form">
             <div class="row">
                 <div class="input-group">
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" pattern="[a-zA-Z]{1,15}" placeholder=" " required>
                     <label for="name"><i class='bx bxs-user'></i> Name*</label>
                 </div>
 
                 <div class="input-group">
-                    <input type="text" id="number" required>
+                    <input type="text" id="number" pattern="[0-9]{10,11}" placeholder=" " required>
                     <label for="number"><i class='bx bxs-phone'></i> Phone No.*</label>
                 </div>
             </div>
 
             <div class="input-group">
-                <input type="text" id="email" required>
+                <input type="text" id="email" pattern="[A-Za-z0-9]+@[A-Za-z0-9]+\.[a-z]{2,}" placeholder=" " required>
                 <label for="email"><i class='bx bxs-envelope'></i> Email*</label>
             </div>
 
@@ -222,7 +222,7 @@
                 <label for="message"><i class='bx bxs-chat'></i> Leave a message*</label>
             </div>
 
-            <button id="contact-btn" class="btn" type="submit" onclick="submitMail()">SUBMIT <i class='bx bx-mail-send'></i></button>
+            <button id="contact-btn" class="btn" type="submit" onsubmit="submitMail()">SUBMIT <i class='bx bx-mail-send'></i></button>
         </form>
     </section>
 

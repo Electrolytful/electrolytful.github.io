@@ -236,8 +236,18 @@ input, textarea {
   background: transparent;
   font-size: 1rem; }
 
+input:valid {
+  border-color: #1BD754; }
+
 input:focus ~ label,
 input:valid ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -30px;
+  font-size: 0.9rem; }
+
+textarea:valid {
+  border-color: #1BD754; }
+
 textarea:focus ~ label,
 textarea:valid ~ label {
   top: -30px;

@@ -18,12 +18,29 @@ input, textarea {
     font-size: $pfont;
 }
 
-input:focus~label,
-input:valid~label,
-textarea:focus~label,
-textarea:valid~label {
-    top: -30px;
-    font-size: 0.9rem;
+input {
+    &:valid {
+        border-color: $green;
+    }
+
+    &:focus~label,
+    &:valid~label,
+    &:not(:placeholder-shown)~label {
+        top: -30px;
+        font-size: 0.9rem;
+    }
+}
+
+textarea {
+    &:valid {
+        border-color: $green;
+    }
+
+    &:focus~label,
+    &:valid~label {
+        top: -30px;
+        font-size: 0.9rem;
+    }
 }
 
 label {
