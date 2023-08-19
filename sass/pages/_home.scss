@@ -12,33 +12,6 @@
 
 .intro-text {
     padding-top: 9%;
-
-    h1 {
-        font-size: $largefont;
-        line-height: 1.2;
-        font-weight: 650;
-        letter-spacing: 1px;
-        cursor: default;
-        margin-left: -7.5px;
-    }
-
-    h2 {
-        font-size: $medfont;
-        line-height: 1.2;
-        font-weight: 500;
-        letter-spacing: 1px;
-        margin: 0 0 4%;
-        cursor: default;
-    }
-
-    h4 {
-        font-size: 1.5rem;
-        line-height: 1.2;
-        font-weight: 400;
-        margin-bottom: 5%;
-        cursor: default;
-        margin-left: 7px;
-    }
 }
 
 .sections-below {
@@ -48,8 +21,6 @@
 
     li {
         margin-right: 7%;
-        font-size: 1.2rem;
-        font-weight: 400;
     }
 }
 
@@ -79,21 +50,8 @@
     cursor: default;
 
     &1 {
-        h2 {
-            font-size: $medfont;
-            font-weight: 400;
-        }
-
         &:hover > #about::after {
             width: 75%;
-        }
-    }
-
-    &2 {
-        p {
-            font-size: $pfont;
-            font-weight: 200;
-            padding-top: 3%;
         }
     }
 }

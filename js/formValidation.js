@@ -15,3 +15,16 @@ number.oninvalid = function(event) {
 email.oninvalid = function(event) {
     event.target.setCustomValidity("• Cannot be empty \n• Should be a valid email address e.g. example@example.com");
 }
+
+// resetting error messages on new input
+name.oninput = function(event) {
+    event.target.setCustomValidity("");
+}
+
+number.oninput = function(event) {
+    event.target.setCustomValidity("");
+}
+
+email.oninput = function(event) {
+    event.target.setCustomValidity("");
+}

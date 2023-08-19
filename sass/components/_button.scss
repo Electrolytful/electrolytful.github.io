@@ -1,11 +1,8 @@
 .btn {
     display: inline-block;
-    font-size: $pfont;
-    font-weight: 600;
     padding: 1% 3%;
     margin: 15px 0 0 6px;
     background: $primary;
-    color: $light;
     border-radius: 30px;
     border: 2px solid transparent;
     transition: ease .30s;
@@ -13,7 +10,6 @@
     &:hover {
         transform: translateY(-7px);
         background: transparent;
-        color: $primary;
         border: 2px solid $primary;
     }
 }

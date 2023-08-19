@@ -1,0 +1,207 @@
+.logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: $light;
+}
+
+.nav {
+    a {
+        color: $light;
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+}
+
+#nav-icon {
+    font-size: 24px;
+    color: $light;
+}
+
+.btn {
+    font-size: $pfont;
+    font-weight: 600;
+    color: $light;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.intro-text {
+    h1 {
+        font-size: $largefont;
+        line-height: 1.2;
+        font-weight: 650;
+        letter-spacing: 1px;
+        cursor: default;
+        margin-left: -7.5px;
+    }
+
+    h2 {
+        font-size: $medfont;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin: 0 0 4%;
+        cursor: default;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        font-weight: 400;
+        margin-bottom: 5%;
+        cursor: default;
+        margin-left: 7px;
+    }
+}
+
+.sections-below {
+    li {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
+
+.about-me {
+    &1 {
+        h2 {
+            font-size: $medfont;
+            font-weight: 400;
+        }
+    }
+
+    &2 {
+        p {
+            font-size: $pfont;
+            font-weight: 200;
+            padding-top: 3%;
+        }
+    }
+}
+
+.layer {
+    h3 {
+        position: absolute;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 400;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all .35s;
+    }
+
+    p {
+        position: absolute;
+        width: 100%;
+        font-size: 0.9rem;
+        font-weight: 250;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all .35s;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    i {
+        position: absolute;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 250;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all .35s;
+    }
+
+    &:hover {
+        h3 {
+            bottom: 35%;
+            opacity: 1;
+        }
+
+        p {
+            bottom: 20%;
+            opacity: 1;
+        }
+
+        i {
+            bottom: 5%;
+            opacity: 1;
+        }
+    }
+}
+
+#skills-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: $medfont;
+}
+
+.panel {
+    &-desc {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 350;
+    }
+}
+
+#projects-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: $medfont
+}
+
+.job {
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        margin-top: 2%;
+        font-size: 1.6rem;
+    }
+
+    p {
+        margin-top: 2%;
+        font-size: 1.2rem;
+    }
+}
+
+#jobs-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: $medfont;
+}
+
+input, textarea {
+    font-size: $pfont;
+    color: #fff;
+}
+
+input {
+    &:focus~label,
+    &:valid~label,
+    &:not(:placeholder-shown)~label {
+        font-size: 0.9rem;
+    }
+}
+
+textarea {
+    &:focus~label,
+    &:valid~label {
+        font-size: 0.9rem;
+    }
+}
+
+.copyright {
+    p {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+}

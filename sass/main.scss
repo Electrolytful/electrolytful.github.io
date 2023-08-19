@@ -1,24 +1,21 @@
 // imports
-@import "abstracts/mixins";
 @import "abstracts/variables";
 
-@import "base/animations";
 @import "base/base";
-@import "base/typography";
-@import "base/utilities";
 @import "base/media";
+@import "base/typography";
 
 @import "components/button";
 @import "components/card";
-@import "components/panel";
-@import "components/job";
 @import "components/form";
+@import "components/job";
+@import "components/panel";
 
-@import "layout/header";
 @import "layout/footer";
+@import "layout/header";
 
-@import "pages/home";
-@import "pages/skills";
-@import "pages/projects";
-@import "pages/jobs";
 @import "pages/contact";
+@import "pages/home";
+@import "pages/jobs";
+@import "pages/projects";
+@import "pages/skills";
