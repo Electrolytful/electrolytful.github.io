@@ -3,6 +3,7 @@ const name = document.getElementById("name");
 const number = document.getElementById("number");
 const email = document.getElementById("email");
 
+
 // setting custom error messages for the inputs
 name.oninvalid = function(event) {
     event.target.setCustomValidity("• Cannot be empty\n• Should contain only upper and lowercase letters\n• Maximum 15 characters");
