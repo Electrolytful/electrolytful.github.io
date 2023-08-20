@@ -4,7 +4,9 @@ form.addEventListener("submit", submitMail);
 
 
 // function to get user input from the contact form and submit the mail
-async function submitMail() {
+async function submitMail(event) {
+  event.preventDefault();
+
   const name = document.getElementById("name").value;
   const number = document.getElementById("number").value;
   const email = document.getElementById("email").value;
