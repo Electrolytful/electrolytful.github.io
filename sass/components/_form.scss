@@ -17,12 +17,12 @@ input, textarea {
 }
 
 input {
-    &:valid {
+    &:valid:not(:placeholder-shown) {
         border-color: $green;
     }
 
     &:focus~label,
-    &:valid~label,
+    &:valid:not(:placeholder-shown)~label,
     &:not(:placeholder-shown)~label {
         top: -30px;
     }

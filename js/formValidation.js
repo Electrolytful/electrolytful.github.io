@@ -10,12 +10,13 @@ name.oninvalid = function(event) {
 }
 
 number.oninvalid = function(event) {
-    event.target.setCustomValidity("• Cannot be empty\n• Should contain only digits\n• Number should be 10-11 digits");
+    event.target.setCustomValidity("• Should contain only digits\n• Number should be 10-11 digits");
 }
 
 email.oninvalid = function(event) {
     event.target.setCustomValidity("• Cannot be empty \n• Should be a valid email address e.g. example@example.com");
 }
+
 
 // resetting error messages on new input
 name.oninput = function(event) {

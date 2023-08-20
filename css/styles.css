@@ -287,11 +287,11 @@ input, textarea {
   border: 1px solid #fff;
   background: transparent; }
 
-input:valid {
+input:valid:not(:placeholder-shown) {
   border-color: #1BD754; }
 
 input:focus ~ label,
-input:valid ~ label,
+input:valid:not(:placeholder-shown) ~ label,
 input:not(:placeholder-shown) ~ label {
   top: -30px; }
 
